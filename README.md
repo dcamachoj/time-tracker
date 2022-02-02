@@ -33,42 +33,25 @@ npm run build
 
 You can run the newly built app with `npm run start`. This uses [sirv](https://github.com/lukeed/sirv), which is included in your package.json's `dependencies` so that the app will work when you deploy to platforms like [Heroku](https://heroku.com).
 
-## Deploying to the web
-
-### With [Vercel](https://vercel.com)
-
-Install `vercel` if you haven't already:
-
-```bash
-npm install -g vercel
-```
-
-Then, from within your project folder:
-
-```bash
-cd public
-vercel deploy --name my-project
-```
-
-### With [surge](https://surge.sh/)
-
-Install `surge` if you haven't already:
-
-```bash
-npm install -g surge
-```
-
-Then, from within your project folder:
-
-```bash
-npm run build
-surge public my-project.surge.sh
-```
-
 ## Published Web Site
 
-https://time-tracker-pub-9gsrlh6vu-dcamachoj.vercel.app/
+https://time-tracker-peach.vercel.app
 
 ## Git Repository
 
 https://github.com/dcamachoj/time-tracker
+
+## Decisions
+
+- [Svelte](https://svelte.dev/):
+  I'm more comfortable with it.
+  It's a compiler, with framework capabilities.
+- Own css instead of a library. Libraries are blated with stuff I don't need.
+  For example, most libraries contains breakpoints that are hard to change/build.
+- CSS Variables. Centralized color definition. I could go with Less or Sass,
+  but I think for this project, adding css preprocessors is too much.
+- CSS Media Query. To provide with variations for desktop.
+- JS Media Query. IsMobile store, for example. Svelte makes it easy to work with that.
+  Instead of complex CSS Media Queries. I don't know if `complex` is the right work, but it will get bloated easily.
+- CSS Grid system. Most prefer Flex, and I do too, but for the main layout,
+  Grid seams more appropriate.

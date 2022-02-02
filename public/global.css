@@ -1,3 +1,16 @@
+:root {
+  --color-blue: hsl(246, 80%, 60%);
+  --color-work: hsl(15, 100%, 70%);
+  --color-play: hsl(195, 74%, 62%);
+  --color-study: hsl(348, 100%, 68%);
+  --color-exercise: hsl(145, 58%, 55%);
+  --color-social: hsl(264, 64%, 52%);
+  --color-self-care: hsl(43, 84%, 65%);
+  --color-darker: hsl(226, 43%, 10%);
+  --color-dark: hsl(235, 46%, 20%);
+  --color-desaturated: hsl(235, 45%, 61%);
+  --color-pale: hsl(236, 100%, 87%);
+}
 html,
 body {
   position: relative;
@@ -10,7 +23,7 @@ body {
   font-family: "Rubik", sans-serif;
   color: white;
   font-size: 18px;
-  background-color: hsl(226, 43%, 10%);
+  background-color: var(--color-darker, hsl(226, 43%, 10%));
 }
 .font-small {
   font-size: 14px;
@@ -23,70 +36,4 @@ body {
 }
 .main-radius {
   border-radius: 12px;
-}
-.bg-blue {
-  background-color: hsl(246, 80%, 60%);
-}
-.fg-blue {
-  color: hsl(246, 80%, 60%);
-}
-.bg-work {
-  background-color: hsl(15, 100%, 70%);
-}
-.fg-work {
-  color: hsl(15, 100%, 70%);
-}
-.bg-play {
-  background-color: hsl(195, 74%, 62%);
-}
-.fg-play {
-  color: hsl(195, 74%, 62%);
-}
-.bg-study {
-  background-color: hsl(348, 100%, 68%);
-}
-.fg-study {
-  color: hsl(348, 100%, 68%);
-}
-.bg-exercise {
-  background-color: hsl(145, 58%, 55%);
-}
-.fg-exercise {
-  color: hsl(145, 58%, 55%);
-}
-.bg-social {
-  background-color: hsl(264, 64%, 52%);
-}
-.fg-social {
-  color: hsl(264, 64%, 52%);
-}
-.bg-self-care {
-  background-color: hsl(43, 84%, 65%);
-}
-.fg-self-care {
-  color: hsl(43, 84%, 65%);
-}
-.bg-darker {
-  background-color: hsl(226, 43%, 10%);
-}
-.fg-darker {
-  color: hsl(226, 43%, 10%);
-}
-.bg-dark {
-  background-color: hsl(235, 46%, 20%);
-}
-.fg-dark {
-  color: hsl(235, 46%, 20%);
-}
-.bg-desaturated {
-  background-color: hsl(235, 45%, 61%);
-}
-.fg-desaturated {
-  color: hsl(235, 45%, 61%);
-}
-.bg-pale {
-  background-color: hsl(236, 100%, 87%);
-}
-.fg-pale {
-  color: hsl(236, 100%, 87%);
 }

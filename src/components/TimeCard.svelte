@@ -18,10 +18,10 @@
 </script>
 
 <div
-  class="card bg-{timeData.name} main-radius type-{timeData.name}"
+  class="card main-radius type-{timeData.name}"
   class:is-desktop={!$IsMobile}
 >
-  <div class="content main-radius bg-dark">
+  <div class="content main-radius">
     <div class="header">
       <div class="type-title">
         {timeData.title}
@@ -51,6 +51,7 @@
     background-position-y: top;
   }
   .content {
+    background-color: var(--color-dark, hsl(235, 46%, 20%));
     display: flex;
     flex-direction: column;
     flex: 1;
@@ -63,6 +64,7 @@
   }
   .menu {
     cursor: pointer;
+    color: var(--color-pale, hsl(236, 100%, 87%));
   }
   .data {
     display: flex;
@@ -77,31 +79,39 @@
   }
   .last {
     font-size: 16px;
+    color: var(--color-pale, hsl(236, 100%, 87%));
   }
   .type-title {
     flex: 1;
   }
   .type-work {
+    background-color: var(--color-work, hsl(15, 100%, 70%));
     background-image: url(/images/icon-work.svg);
     grid-area: work;
   }
+
   .type-play {
+    background-color: var(--color-play, hsl(195, 74%, 62%));
     background-image: url(/images/icon-play.svg);
     grid-area: play;
   }
   .type-study {
+    background-color: var(--color-study, hsl(348, 100%, 68%));
     background-image: url(/images/icon-study.svg);
     grid-area: study;
   }
   .type-exercise {
+    background-color: var(--color-exercise, hsl(145, 58%, 55%));
     background-image: url(/images/icon-exercise.svg);
     grid-area: exercise;
   }
   .type-social {
+    background-color: var(--color-social, hsl(264, 64%, 52%));
     background-image: url(/images/icon-social.svg);
     grid-area: social;
   }
   .type-self-care {
+    background-color: var(--color-self-care, hsl(43, 84%, 65%));
     background-image: url(/images/icon-self-care.svg);
     grid-area: self-care;
   }

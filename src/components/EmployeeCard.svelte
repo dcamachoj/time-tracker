@@ -17,10 +17,7 @@
   }
 </script>
 
-<div
-  class="employee bg-dark main-radius flex-col"
-  class:is-desktop={!$IsMobile}
->
+<div class="employee main-radius flex-col" class:is-desktop={!$IsMobile}>
   <div class="profile main-radius flex">
     <div class="image">
       <img alt="profile" src="/images/image-{employee.userName}.png" />
@@ -50,9 +47,10 @@
     margin: 0;
     margin-top: 4rem;
     grid-area: employee;
+    background-color: var(--color-dark, hsl(235, 46%, 20%));
   }
   .profile {
-    background-color: #5746ea;
+    background-color: var(--color-blue, hsl(246, 80%, 60%));
     padding: 2rem;
     padding-right: 0.5rem;
     padding-bottom: 1.2rem;
@@ -77,7 +75,7 @@
     border: none;
     display: block;
     background: transparent;
-    color: #444886;
+    color: var(--color-desaturated, hsl(235, 45%, 61%));
     font-family: "Rubik", sans-serif;
     font-size: 18px;
     cursor: pointer;

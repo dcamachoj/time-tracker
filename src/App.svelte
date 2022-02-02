@@ -9,6 +9,20 @@
   let windowWidth: number = window.outerWidth;
 
   $: setScreenWidth(windowWidth);
+
+  // var(--color-blue, hsl(246, 80%, 60%));
+  // var(--color-work, hsl(15, 100%, 70%));
+  // var(--color-play, hsl(195, 74%, 62%));
+  // var(--color-study, hsl(348, 100%, 68%));
+  // var(--color-exercise, hsl(145, 58%, 55%));
+  // var(--color-social, hsl(264, 64%, 52%));
+  // var(--color-self-care, hsl(43, 84%, 65%));
+  // var(--color-darker, hsl(226, 43%, 10%));
+  // var(--color-dark, hsl(235, 46%, 20%));
+  // var(--color-desaturated, hsl(235, 45%, 61%));
+  // var(--color-pale, hsl(236, 100%, 87%));
+
+  // const  onColor = (key: string, val: string) => `// var(--color-${key}, ${val});`;
 </script>
 
 <svelte:window bind:outerWidth={windowWidth} />
