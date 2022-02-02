@@ -9,6 +9,13 @@ interface TimeFrames {
 }
 
 interface TimeData {
+  name: string;
   title: string;
   timeframes: TimeFrames;
+}
+
+interface Employee {
+  userName: string;
+  displayName: string;
+  timeData: TimeData[];
 }
