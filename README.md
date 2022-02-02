@@ -64,3 +64,11 @@ Then, from within your project folder:
 npm run build
 surge public my-project.surge.sh
 ```
+
+## Published Web Site
+
+https://time-tracker-pub-9gsrlh6vu-dcamachoj.vercel.app/
+
+## Git Repository
+
+https://github.com/dcamachoj/time-tracker
