@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { IsMobile } from "./stores";
+
   const titles = {
     daily: "Day",
     weekly: "Week",
@@ -15,7 +17,10 @@
   }
 </script>
 
-<div class="card bg-{timeData.name} main-radius type-{timeData.name}">
+<div
+  class="card bg-{timeData.name} main-radius type-{timeData.name}"
+  class:is-desktop={!$IsMobile}
+>
   <div class="content main-radius bg-dark">
     <div class="header">
       <div class="type-title">
@@ -48,12 +53,16 @@
   .content {
     display: flex;
     flex-direction: column;
+    flex: 1;
   }
   .header {
     display: flex;
     flex-direction: row;
     padding: 1rem;
     padding-bottom: 0.8rem;
+  }
+  .menu {
+    cursor: pointer;
   }
   .data {
     display: flex;
@@ -74,20 +83,42 @@
   }
   .type-work {
     background-image: url(/images/icon-work.svg);
+    grid-area: work;
   }
   .type-play {
     background-image: url(/images/icon-play.svg);
+    grid-area: play;
   }
   .type-study {
     background-image: url(/images/icon-study.svg);
+    grid-area: study;
   }
   .type-exercise {
     background-image: url(/images/icon-exercise.svg);
+    grid-area: exercise;
   }
   .type-social {
     background-image: url(/images/icon-social.svg);
+    grid-area: social;
   }
   .type-self-care {
     background-image: url(/images/icon-self-care.svg);
+    grid-area: self-care;
+  }
+
+  .card.is-desktop {
+    min-width: 185px;
+    padding-top: 2.5rem;
+  }
+  .card.is-desktop .header {
+    padding-bottom: 1.2rem;
+  }
+
+  .card.is-desktop .data {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .card.is-desktop .hours {
+    margin-bottom: 0.5rem;
   }
 </style>
